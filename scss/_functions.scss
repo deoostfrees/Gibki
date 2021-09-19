@@ -1,0 +1,9 @@
+// Breakpoints
+@function breakpoint($size) {
+  @if map-has-key($flex-breakpoints, $size) {
+    @return map-get($flex-breakpoints, $size);
+  }
+
+  @warn 'Unknown `#{$size}` in $flex-breakpoints.';
+  @return null;
+}

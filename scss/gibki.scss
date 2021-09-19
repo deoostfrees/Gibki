@@ -1,0 +1,173 @@
+/**
+ * Gibki
+ *
+ * @author Benjamin de Oostfrees
+ * @version 1.0.3
+ * @url https://github.com/deoostfrees/Gibki
+ *
+ * MIT License
+ */
+
+@import
+  'variables',
+  'functions',
+  'mixins';
+
+.container {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: $container-max-width;
+  padding-inline-start: $flex-gutter-horizontal / 2;
+  padding-inline-end: $flex-gutter-horizontal / 2;
+  width: 100%;
+
+
+  & & {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+}
+
+.flex {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+// Gutters
+@if $flex-gutter-horizontal > 0 {
+
+  .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) {
+    margin-inline-start: -$flex-gutter-horizontal / 2;
+    margin-inline-end: -$flex-gutter-horizontal / 2;
+
+
+    & > [class*='flex__'] {
+      padding-inline-start: $flex-gutter-horizontal / 2;
+      padding-inline-end: $flex-gutter-horizontal / 2;
+    }
+  }
+}
+
+@if $flex-gutter-vertical > 0 {
+
+  .flex:not(.flex--no-gutters):not(.flex--no-vertical-gutters) {
+    row-gap: $flex-gutter-horizontal;
+  }
+}
+
+.flex {
+
+
+
+  // Directions
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  // Wrapping
+
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  // Horizontal alignment
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
+  // Vertical alignment
+
+  &--stretch {
+
+    .flex > & {
+      align-self: stretch;
+    }
+  }
+
+  &--top {
+    align-items: flex-start;
+
+    .flex > & {
+      align-self: flex-start;
+    }
+  }
+
+  &--bottom {
+    align-items: flex-end;
+
+    .flex > & {
+      align-self: flex-end;
+    }
+  }
+
+  &--middle {
+    align-items: center;
+
+    .flex > & {
+      align-self: center;
+    }
+  }
+
+  &--baseline {
+    align-items: baseline;
+
+    .flex > & {
+      align-self: baseline;
+    }
+  }
+}
+
+// flex__*
+
+[class*='flex__'] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.flex__auto {
+  flex: 1;
+}
+
+@include flex__();
+
+// Reordering
+@include flex--order-();
+@include flex--offset-();
+
+// Responsive
+@each $key, $breakpoint in $flex-breakpoints {
+  @media screen and (min-width: breakpoint(#{$key})) {
+    @include flex__(#{$key});
+    @include flex--offset-(#{$key});
+    @include flex--order-(#{$key});
+  }
+}

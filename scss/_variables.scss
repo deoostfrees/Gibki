@@ -1,0 +1,18 @@
+// Container max width
+$container-max-width: 66.667rem !default;
+
+// Gutter width
+$flex-gutter-vertical: 2rem !default;
+$flex-gutter-horizontal: 2rem !default; // 1rem on each side of a column
+
+// Breakpoints map
+// Based on 16px Browser's internal font-size
+$flex-breakpoints: (
+  'sm': 31.25em, // 500px
+  'md': 43.75em, // 700px
+  'lg': 62.5em,  // 1000px
+  'xl': 75em     // 1200px
+) !default;
+
+// Available columns
+$flex-columns: 12 !default;

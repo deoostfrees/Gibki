@@ -1,0 +1,33 @@
+{
+  "name": "gibki",
+  "version": "1.0.3",
+  "description": "Gibki is an open-source and straightforward grid system based on Flexbox.",
+  "main": "css/gibki.css",
+  "style": "css/gibki.css",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not <= 1%",
+    "not IE 10",
+    "not IE 11"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deoostfrees/gibki.git"
+  },
+  "keywords": [
+    "grid",
+    "flexbox"
+  ],
+  "author": "de Oostfreese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deoostfrees/Gibki/issues"
+  },
+  "homepage": "https://github.com/deoostfrees/Giki"
+}
