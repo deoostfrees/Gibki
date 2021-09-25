@@ -2,6 +2,8 @@
 
 Gibki is an open-source and straightforward grid system based on Flexbox.
 
+[Open in CodePen](https://codepen.io/collection/pgogaZ)
+
 ## Table of contents
 
 - [Installation](#installation)
@@ -432,7 +434,7 @@ You can also apply `.flex--middle` to individual columns.
 
 ### Reordering
 
-Use `.flex--order-` classes for controlling the visual order of your content.
+Use `.flex--order-` classes for controlling the visual order of your content. Please use this with care.
 
 ```html
 <div class="container">
