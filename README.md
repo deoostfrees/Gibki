@@ -99,9 +99,9 @@ To nest your content with the default grid, add a new `.flex` container and set 
     <div class="flex__lg-4"></div>
     <div class="flex__lg-8">
       <div class="flex">
-        <div class="flex__4"></div>
-        <div class="flex__4"></div>
-        <div class="flex__4"></div>
+        <div class="flex__6"></div>
+        <div class="flex__auto"></div>
+        <div class="flex__auto"></div>
       </div>
     </div>
   </div>
@@ -112,12 +112,12 @@ To nest your content with the default grid, add a new `.flex` container and set 
 
 The grid system lets you create responsive layouts by giving you the option to define different column widths for each viewport. Four different breakpoints determine the viewports.
 
-![](https://rqrauhvmra.com/gibki/img/responsive-layouts.png)
-
 - &#x3E;= 500px: Small `sm`
 - &#x3E;= 700px: Medium `md`
 - &#x3E;= 1000px: Large `lg`
 - &#x3E;= 1200px: Extra large `xl`
+
+![](https://rqrauhvmra.com/gibki/img/responsive-layouts.png)
 
 ```html
 <div class="container">
