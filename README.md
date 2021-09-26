@@ -38,6 +38,28 @@ npm install gibki --save
 
 ### General
 
+#### .container
+
+Containers provide a means to center content. Use `.container` for a responsive width:
+
+![](https://rqrauhvmra.com/gibki/img/container.png)
+
+```html
+<div class="container">
+
+</div>
+```
+
+And if necessary additionally with `.container--small` for a smaller width:
+
+![](https://rqrauhvmra.com/gibki/img/container--small.png)
+
+```html
+<div class="container container--small">
+
+</div>
+```
+
 #### .flex
 
 `.flex` is the wrapper for columns.
