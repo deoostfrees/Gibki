@@ -28,10 +28,21 @@ CSS: `css/flex.min.css` minified, or `css/flex.css` un-minified
 
 ### Package managers
 
-Gibki is also available on npm.
+You can install Gibki through npm or yarn like any other dependency:
 
 ```shell
 npm install gibki --save
+```
+
+```shell
+yarn add gibki
+```
+
+Then you can import Gibki in your Sass codebase:
+
+```scss
+@import
+  '~gibki/scss/gibki';
 ```
 
 ## Usage
