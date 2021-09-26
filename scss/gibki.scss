@@ -22,6 +22,10 @@
   width: 100%;
 
 
+  &--small {
+    max-width: $container-max-width--small;
+  }
+
   & & {
     padding-inline-start: 0;
     padding-inline-end: 0;

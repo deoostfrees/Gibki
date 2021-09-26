@@ -20,6 +20,10 @@
   width: 100%;
 }
 
+.container--small {
+  max-width: 34rem;
+}
+
 .container .container {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
