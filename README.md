@@ -19,6 +19,7 @@ Gibki is an open-source and straightforward grid system based on Flexbox.
   - [Horizontal alignment](#horizontal-alignment)
   - [Vertical alignment](#vertical-alignment)
   - [Reordering](#reordering)
+- [Browser support](#browser-support)
 
 ## Installation
 
@@ -555,3 +556,12 @@ Offset a column by adding `.flex--offset-` classes.
   </div>
 </div>
 ```
+
+## Browser support
+
+Gibki supports the following browser (all the latest versions):
+
+- Chrome
+- Edge
+- Firefox
+- Safari
