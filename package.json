@@ -5,7 +5,7 @@
   "main": "css/gibki.css",
   "style": "css/gibki.css",
   "devDependencies": {
-    "autoprefixer": "^10.4.0"
+    "autoprefixer": "^10.4.2"
   },
   "browserslist": [
     "last 2 versions",
