@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /**
  * Gibki
  *
@@ -17,8 +19,8 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: $container-max-width;
-  padding-inline-start: $flex-gutter-horizontal / 2;
-  padding-inline-end: $flex-gutter-horizontal / 2;
+  padding-inline-start: math.div($flex-gutter-horizontal, 2);
+  padding-inline-end: math.div($flex-gutter-horizontal, 2);
   width: 100%;
 
 
@@ -44,13 +46,13 @@
 @if $flex-gutter-horizontal > 0 {
 
   .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) {
-    margin-inline-start: -$flex-gutter-horizontal / 2;
-    margin-inline-end: -$flex-gutter-horizontal / 2;
+    margin-inline-start: math.div(-$flex-gutter-horizontal, 2);
+    margin-inline-end: math.div(-$flex-gutter-horizontal, 2);
 
 
     & > [class*='flex__'] {
-      padding-inline-start: $flex-gutter-horizontal / 2;
-      padding-inline-end: $flex-gutter-horizontal / 2;
+      padding-inline-start: math.div($flex-gutter-horizontal, 2);
+      padding-inline-end: math.div($flex-gutter-horizontal, 2);
     }
   }
 }

@@ -5,7 +5,7 @@
   @for $i from 1 through $flex-columns {
 
     .flex__#{$breakpoint}#{$i} {
-      width: $i / $flex-columns * 100%;
+      width: math.div($i, $flex-columns) * 100%;
     }
   }
 }
@@ -17,7 +17,7 @@
   @for $i from 1 through $flex-columns {
 
     .flex--offset-#{$breakpoint}#{$i} {
-      margin-inline-start: $i / $flex-columns * 100%;
+      margin-inline-start: math.div($i, $flex-columns) * 100%;
     }
   }
 }
