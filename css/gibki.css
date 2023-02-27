@@ -10,13 +10,13 @@
 .container {
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: 66.667rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  max-width: 75rem;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
   width: 100%;
 }
 .container--small {
-  max-width: 34rem;
+  max-width: 35.5rem;
 }
 .container .container {
   padding-inline-start: 0;
@@ -32,16 +32,16 @@
 }
 
 .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) {
-  margin-inline-start: -1rem;
-  margin-inline-end: -1rem;
+  margin-inline-start: -0.75rem;
+  margin-inline-end: -0.75rem;
 }
 .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) > [class*=flex__] {
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
 }
 
 .flex:not(.flex--no-gutters):not(.flex--no-vertical-gutters) {
-  row-gap: 2rem;
+  row-gap: 1.5rem;
 }
 
 .flex--row-reverse {

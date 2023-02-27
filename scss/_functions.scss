@@ -1,9 +1,9 @@
 // Breakpoints
 @function breakpoint($size) {
-  @if map-has-key($flex-breakpoints, $size) {
-    @return map-get($flex-breakpoints, $size);
+  @if map-has-key($gibki-breakpoints, $size) {
+    @return map-get($gibki-breakpoints, $size);
   }
 
-  @warn 'Unknown `#{$size}` in $flex-breakpoints.';
+  @warn 'Unknown `#{$size}` in $gibki-breakpoints.';
   @return null;
 }

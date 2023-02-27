@@ -1,15 +1,16 @@
 // Container max width
-// Based on 18px
-$container-max-width: 66.667rem !default;
-$container-max-width--small: 34rem !default;
+// Based on 16px
+$gibki-container-max-width: 75rem !default; // 1200px
+$gibki-container-max-width--small: 35.5rem !default; // 568px
 
 // Gutter width
-$flex-gutter-vertical: 2rem !default;
-$flex-gutter-horizontal: 2rem !default; // 1rem on each side of a column
+// Based on 16px
+$gibki-gutter-vertical: 1.5rem !default; // 24px
+$gibki-gutter-horizontal: 1.5rem !default; // 0.75rem (12px) on each side of a column
 
 // Breakpoints map
-// Based on 16px Browser's internal font-size
-$flex-breakpoints: (
+// Based on 16px
+$gibki-breakpoints: (
   'sm': 31.25em, // 500px
   'md': 43.75em, // 700px
   'lg': 62.5em,  // 1000px
@@ -17,4 +18,4 @@ $flex-breakpoints: (
 ) !default;
 
 // Available columns
-$flex-columns: 12 !default;
+$gibki-columns: 12 !default;
