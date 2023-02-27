@@ -18,14 +18,14 @@
 .container {
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: $container-max-width;
-  padding-inline-start: math.div($flex-gutter-horizontal, 2);
-  padding-inline-end: math.div($flex-gutter-horizontal, 2);
+  max-width: $gibki-container-max-width;
+  padding-inline-start: math.div($gibki-gutter-horizontal, 2);
+  padding-inline-end: math.div($gibki-gutter-horizontal, 2);
   width: 100%;
 
 
   &--small {
-    max-width: $container-max-width--small;
+    max-width: $gibki-container-max-width--small;
   }
 
   & & {
@@ -43,24 +43,24 @@
 }
 
 // Gutters
-@if $flex-gutter-horizontal > 0 {
+@if $gibki-gutter-horizontal > 0 {
 
   .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) {
-    margin-inline-start: math.div(-$flex-gutter-horizontal, 2);
-    margin-inline-end: math.div(-$flex-gutter-horizontal, 2);
+    margin-inline-start: math.div(-$gibki-gutter-horizontal, 2);
+    margin-inline-end: math.div(-$gibki-gutter-horizontal, 2);
 
 
     & > [class*='flex__'] {
-      padding-inline-start: math.div($flex-gutter-horizontal, 2);
-      padding-inline-end: math.div($flex-gutter-horizontal, 2);
+      padding-inline-start: math.div($gibki-gutter-horizontal, 2);
+      padding-inline-end: math.div($gibki-gutter-horizontal, 2);
     }
   }
 }
 
-@if $flex-gutter-vertical > 0 {
+@if $gibki-gutter-vertical > 0 {
 
   .flex:not(.flex--no-gutters):not(.flex--no-vertical-gutters) {
-    row-gap: $flex-gutter-horizontal;
+    row-gap: $gibki-gutter-horizontal;
   }
 }
 
@@ -170,7 +170,7 @@
 @include flex--offset-();
 
 // Responsive
-@each $key, $breakpoint in $flex-breakpoints {
+@each $key, $breakpoint in $gibki-breakpoints {
   @media screen and (min-width: breakpoint(#{$key})) {
     @include flex__(#{$key});
     @include flex--offset-(#{$key});
