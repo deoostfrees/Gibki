@@ -10,6 +10,16 @@
  * MIT License
  */
 
+:root {
+  // Container max width
+  // Based on 16px
+  --gibki-container-max-width: 75rem; // 1200px
+  // Gutter width
+  // Based on 16px
+  --gibki-gutter-vertical: 1.5rem; // 24px
+  --gibki-gutter-horizontal: 1.5rem; // 0.75rem (12px) on each side of a column
+}
+
 @import
   'variables',
   'functions',
@@ -18,14 +28,16 @@
 .container {
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: $gibki-container-max-width;
-  padding-inline-start: math.div($gibki-gutter-horizontal, 2);
-  padding-inline-end: math.div($gibki-gutter-horizontal, 2);
+  max-width: var(--gibki-container-max-width);
+  padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
+  padding-inline-end: calc(var(--gibki-gutter-horizontal) / 2);
   width: 100%;
 
 
-  &--small {
-    max-width: $gibki-container-max-width--small;
+  @each $name, $size in $gibki-container-max-widths {
+    &--#{$name} {
+      max-width: $size;
+    }
   }
 
   & & {
@@ -43,25 +55,19 @@
 }
 
 // Gutters
-@if $gibki-gutter-horizontal > 0 {
-
-  .flex:not(.flex--no-gutters):not(.flex--no-horizontal-gutters) {
-    margin-inline-start: math.div(-$gibki-gutter-horizontal, 2);
-    margin-inline-end: math.div(-$gibki-gutter-horizontal, 2);
+.flex:not(.flex--no-gutters, .flex--no-horizontal-gutters) {
+  margin-inline-start: calc(var(--gibki-gutter-horizontal) / 2 * -1);
+  margin-inline-end: calc(var(--gibki-gutter-horizontal) / 2 * -1);
 
 
-    & > [class*='flex__'] {
-      padding-inline-start: math.div($gibki-gutter-horizontal, 2);
-      padding-inline-end: math.div($gibki-gutter-horizontal, 2);
-    }
+  & > [class*='flex__'] {
+    padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
+    padding-inline-end: calc(var(--gibki-gutter-horizontal) / 2);
   }
 }
 
-@if $gibki-gutter-vertical > 0 {
-
-  .flex:not(.flex--no-gutters):not(.flex--no-vertical-gutters) {
-    row-gap: $gibki-gutter-horizontal;
-  }
+.flex:not(.flex--no-gutters, .flex--no-vertical-gutters) {
+  row-gap: var(--gibki-gutter-horizontal);
 }
 
 .flex {
