@@ -14,10 +14,14 @@
   // Container max width
   // Based on 16px
   --gibki-container-max-width: 75rem; // 1200px
+  --gibki-small-container-max-width: 38.25rem; // 612px
+  // Container padding
+  // Based on 16px
+  --gibki-container-padding: 1.5rem; // 24px
   // Gutter width
   // Based on 16px
   --gibki-gutter-vertical: 1.5rem; // 24px
-  --gibki-gutter-horizontal: 1.5rem; // 0.75rem (12px) on each side of a column
+  --gibki-gutter-horizontal: 1.5rem; // 24px
 }
 
 @import
@@ -30,14 +34,16 @@
   margin-inline-end: auto;
   margin-inline-start: auto;
   max-inline-size: var(--gibki-container-max-width);
-  padding-inline-end: calc(var(--gibki-gutter-horizontal) / 2);
-  padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
+  padding-inline-end: var(--gibki-container-padding);
+  padding-inline-start: var(--gibki-container-padding);
 
 
-  @each $name, $size in $gibki-container-max-widths {
-    &--#{$name} {
-      max-inline-size: $size;
-    }
+  &--small {
+    max-inline-size: var(--gibki-small-container-max-width);
+  }
+
+  &--full-width {
+    max-inline-size: none;
   }
 
   & & {
@@ -48,24 +54,31 @@
 
 .flex {
   align-items: stretch;
+  column-gap: var(--gibki-gutter-horizontal);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-
-// Gutters
-.flex:not(.flex--no-gutters, .flex--no-horizontal-gutters) {
-  column-gap: var(--gibki-gutter-horizontal);
-}
-
-.flex:not(.flex--no-gutters, .flex--no-vertical-gutters) {
-  row-gap: var(--gibki-gutter-horizontal);
+  row-gap: var(--gibki-gutter-vertical);
 }
 
 .flex {
 
 
+
+  // Gutters
+  &--no-gutters {
+    --gibki-gutter-horizontal: 0rem;
+    --gibki-gutter-vertical: 0rem;
+  }
+
+  &--no-horizontal-gutters {
+    --gibki-gutter-horizontal: 0rem;
+  }
+
+  &--no-vertical-gutters {
+    --gibki-gutter-vertical: 0rem;
+  }
 
   // Directions
 
@@ -170,7 +183,7 @@
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
-  @media screen and (min-inline-size: breakpoint(#{$key})) {
+  @media screen and (min-width: breakpoint(#{$key})) {
     @include flex__(#{$key});
     @include flex--offset-(#{$key});
     @include flex--order-(#{$key});
