@@ -26,17 +26,17 @@
   'mixins';
 
 .container {
-  margin-inline-start: auto;
+  inline-size: 100%;
   margin-inline-end: auto;
-  max-width: var(--gibki-container-max-width);
-  padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
+  margin-inline-start: auto;
+  max-inline-size: var(--gibki-container-max-width);
   padding-inline-end: calc(var(--gibki-gutter-horizontal) / 2);
-  width: 100%;
+  padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
 
 
   @each $name, $size in $gibki-container-max-widths {
     &--#{$name} {
-      max-width: $size;
+      max-inline-size: $size;
     }
   }
 
@@ -56,14 +56,7 @@
 
 // Gutters
 .flex:not(.flex--no-gutters, .flex--no-horizontal-gutters) {
-  margin-inline-start: calc(var(--gibki-gutter-horizontal) / 2 * -1);
-  margin-inline-end: calc(var(--gibki-gutter-horizontal) / 2 * -1);
-
-
-  & > [class*='flex__'] {
-    padding-inline-start: calc(var(--gibki-gutter-horizontal) / 2);
-    padding-inline-end: calc(var(--gibki-gutter-horizontal) / 2);
-  }
+  column-gap: var(--gibki-gutter-horizontal);
 }
 
 .flex:not(.flex--no-gutters, .flex--no-vertical-gutters) {
@@ -162,7 +155,7 @@
 
 [class*='flex__'] {
   box-sizing: border-box;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .flex__auto {
@@ -177,7 +170,7 @@
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
-  @media screen and (min-width: breakpoint(#{$key})) {
+  @media screen and (min-inline-size: breakpoint(#{$key})) {
     @include flex__(#{$key});
     @include flex--offset-(#{$key});
     @include flex--order-(#{$key});

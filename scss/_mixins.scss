@@ -5,7 +5,7 @@
   @for $i from 1 through $gibki-columns {
 
     .flex__#{$breakpoint}#{$i} {
-      max-width: math.div($i, $gibki-columns) * 100%;
+      max-inline-size: calc(#{math.div($i, $gibki-columns) * 100%} - (var(--gibki-gutter-horizontal) / 2));
     }
   }
 }
