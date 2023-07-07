@@ -5,7 +5,7 @@
   @for $i from 1 through $gibki-columns {
 
     .flex__#{$breakpoint}#{$i} {
-      max-inline-size: calc(#{math.div($i, $gibki-columns) * 100%} - (var(--gibki-gutter-horizontal) / 2));
+      max-inline-size: calc(#{math.div($i, $gibki-columns) * 100%} - var(--gibki-gutter-horizontal) + (var(--gibki-gutter-horizontal) / #{math.div($gibki-columns, $i)}));
     }
   }
 }
@@ -17,7 +17,7 @@
   @for $i from 1 through $gibki-columns {
 
     .flex--offset-#{$breakpoint}#{$i} {
-      margin-inline-start: math.div($i, $gibki-columns) * 100%;
+      margin-inline-start: calc(#{math.div($i, $gibki-columns) * 100%} + (var(--gibki-gutter-horizontal) / #{math.div($gibki-columns, $i)}));
     }
   }
 }
