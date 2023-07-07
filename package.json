@@ -6,13 +6,13 @@
   "style": "css/gibki.css",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "postcss": "^8.4.23",
-    "rollup": "^3.21.4",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "postcss": "^8.4.25",
+    "rollup": "^3.26.2",
     "rollup-plugin-license": "^3.0.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.62.1"
+    "sass": "^1.63.6"
   },
   "browserslist": [
     "last 2 versions",
