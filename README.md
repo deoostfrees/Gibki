@@ -224,7 +224,7 @@ The columns will not wrap.
 
 ### Gutters
 
-The columns and rows have horizontal and vertical spacing. These can be customized using CSS Custom properties.
+The columns and rows have horizontal and vertical spacing. These can be customized using CSS Custom properties:
 
 ```css
   // Gutter width
