@@ -126,13 +126,13 @@
     <div class="container">
       <h1>Gibki</h1>
 
-      <p>Gibki is an open-source and straightforward grid system based on Flexbox.</p>
+      <p>Gibki is an open-source grid system based on Flexbox.</p>
 
       <h2>General</h2>
 
       <h3>.container</h3>
 
-      <p>Containers provide a means to center content. Use <code>.container</code> for a responsive width:</p>
+      <p>Containers provide a way to center content. Use <code>.container</code> for a responsive width:</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">container</span>
         <p><span style="padding: 0 1rem 1rem; display: inline-block;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span></p>
@@ -144,7 +144,7 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <p>And if necessary additionally with <code>.container--small</code> for a smaller width:</p>
+      <p>If needed, you can also use <code>.container--small</code> for a smaller width:</p>
 
       <div class="container container--small"><span style="padding: 1rem; display: inline-block;">container container--small</span>
         <p><span style="padding: 0 1rem 1rem; display: inline-block;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</span></p>
@@ -170,7 +170,7 @@
 
       <h3>.flex__</h3>
 
-      <p><code>.flex__</code> classes creates differend column sizes.</p>
+      <p><code>.flex__</code> classes create different column sizes.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -196,7 +196,7 @@
 
       <h3>.flex__auto</h3>
 
-      <p><code>.flex__auto</code> creates columns that will take up however much space is left.</p>
+      <p><code>.flex__auto</code> creates columns that take up the remaining space.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -220,7 +220,7 @@
 
       <h2>Nesting</h2>
 
-      <p>To nest your content with the default grid, add a new <code>.flex</code> container and set of <code>.flex__</code> columns within an existing <code>.flex__</code> column.</p>
+      <p>To nest content with the default grid, add a new <code>.flex</code> container and a set of <code>.flex__</code> columns within an existing <code>.flex__</code> column.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -248,9 +248,9 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <h2>Responsive layouts</h2>
+      <h2>Responsive Layouts</h2>
 
-      <p>The grid system lets you create responsive layouts by giving you the option to define different column widths for each viewport. Four different breakpoints determine the viewports.</p>
+      <p>The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:</p>
 
       <ul>
         <li>&#x3E;= 500px: Small <code>sm</code></li>
@@ -275,6 +275,19 @@
       &#x3C;div class=&#x22;flex__md-6 flex__lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
       &#x3C;div class=&#x22;flex__md-6 flex__lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
+    </pre>
+
+      <p>These breakpoints can be customized/expanded using SCSS variables:</p>
+
+    <pre>
+    // Breakpoints map
+    // Based on 16px
+    $gibki-breakpoints: (
+      'sm': 31.25em, // 500px
+      'md': 43.75em, // 700px
+      'lg': 62.5em,  // 1000px
+      'xl': 75em     // 1200px
+    );
     </pre>
 
       <h2>Wrapping</h2>
@@ -333,7 +346,16 @@
 
       <h2>Gutters</h2>
 
-      <p>The columns have horizontal and vertical padding to create the gutters between individual columns and rows. You can remove the margin from the wrapper and the padding from the columns and rows with <code>.flex--no-gutters</code>.</p>
+      <p>The columns and rows have horizontal and vertical spacing. These can be customized using CSS Custom properties:</p>
+
+    <pre>
+      // Gutter width
+      // Based on 16px
+      --gibki-gutter-vertical: 1.5rem; // 24px
+      --gibki-gutter-horizontal: 1.5rem; // 24px
+    </pre>
+
+    <p>You can remove the spacing with <code>.flex--no-gutters</code>.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--no-gutters</span>
         <div class="flex flex--no-gutters">
@@ -373,7 +395,7 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <p>Or only remove the vertical gutters with <code>.flex--no-vertical-gutters</code>.</p>
+      <p>Or you remove only the vertical gutters with <code>.flex--no-vertical-gutters</code>.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--no-vertical-gutters</span>
         <div class="flex flex--no-vertical-gutters">
@@ -395,7 +417,7 @@
 
       <h2>Directions</h2>
 
-      <p>The following classes define the direction in which the columns are placed in the wrapper. By default, columns are set left to right in <code>ltr</code> and right to left in <code>rtl</code>.</p>
+      <p>The following classes define the direction in which the columns are placed within the wrapper. By default, columns are set from left to right in <code>ltr</code> (left-to-right languages) and from right to left in <code>rtl</code> (right-to-left languages).</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -413,7 +435,7 @@
 
       <h3>.flex--row-reverse</h3>
 
-      <p><code>row-reverse</code> sets the direction, right to left in <code>ltr</code> and left to right in <code>rtl</code>.</p>
+      <p>The columns are placed from right to left in <code>ltr</code> and left to right in <code>rtl</code>.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--row-reverse</span>
         <div class="flex flex--row-reverse">
@@ -431,7 +453,7 @@
 
       <h3>.flex--column</h3>
 
-      <p><code>.flex--column</code> behaves the same way as <code>.flex--row</code> but top to bottom.</p>
+      <p><code>.flex--column</code> behaves the same way as <code>.flex--row</code> but the columns are stacked from top to bottom.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--column</span>
         <div class="flex flex--column">
@@ -449,7 +471,7 @@
 
       <h3>.flex--column-reverse</h3>
 
-      <p><code>.flex--column-reverse</code> behaves the same way as <code>.flex--row-reverse</code> but bottom to top.</p>
+      <p><code>.flex--column-reverse</code> behaves the same way as <code>.flex--row-reverse</code> but the columns are stacked from bottom to top.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--column-reverse</span>
         <div class="flex flex--column-reverse">
@@ -465,9 +487,9 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <h2>Horizontal alignment</h2>
+      <h2>Horizontal Alignment</h2>
 
-      <p>The following classes define how columns are aligned along the main axis. It helps distribute extra space between the items when they don't reach their maximum size. By default, columns are positioned at the beginning of the container.</p>
+      <p>The following classes define how columns are aligned along the main axis. They help distribute extra space between the items when they don't reach their maximum size. By default, columns are positioned at the beginning of the container.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -527,7 +549,7 @@
 
       <h3>.flex--space-between</h3>
 
-      <p>The columns are evenly spread horizontally; the first column is at the beginning of the container, the last column on the end of the container. Thus, space gets distributed between the columns.</p>
+      <p>The columns are evenly spread horizontally; the first column is at the beginning of the container, and the last column is at the end of the container. Space is distributed between the columns.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--space-between</span>
         <div class="flex flex--space-between">
@@ -565,13 +587,13 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <h2>Vertical alignment</h2>
+      <h2>Vertical Alignment</h2>
 
       <p>The following classes define how columns are aligned along the cross axis when they don't reach their maximum size.</p>
 
       <h3>.flex--stretch</h3>
 
-      <p>This is the default value. You don't need to add the class to the wrapper; it stretches the height of the columns to fill the container but still respects <code>min-width</code> and <code>max-width</code>.</p>
+      <p>This is the default value. You don't need to add the class to the wrapper; it stretches the height of the columns to fill the container while respecting <code>min-width</code> and <code>max-width</code>.</p>
 
       <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
         <div class="flex">
@@ -589,7 +611,7 @@
     &#x3C;/div&#x3E;
     </pre>
 
-      <p>You can apply <code>.flex--stretch</code> to individual columns if necessary.</p>
+      <p>You can also apply <code>.flex--stretch</code> to individual columns if necessary.</p>
 
     <div class="container"><span style="padding: 1rem; display: inline-block;">flex flex--top</span>
       <div class="flex flex--top">
@@ -723,7 +745,7 @@
 
     <h2>Reordering</h2>
 
-    <p>Use <code>.flex--order-</code> classes for controlling the visual order of your content.</p>
+    <p>Use <code>.flex--order-</code> classes to control the visual order of your content.</p>
 
     <div class="container"><span style="padding: 1rem; display: inline-block;">flex</span>
       <div class="flex">
