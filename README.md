@@ -1,6 +1,6 @@
 # Gibki
 
-Gibki is an open-source and straightforward grid system based on Flexbox.
+Gibki is an open-source grid system based on Flexbox.
 
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
@@ -8,28 +8,28 @@ Gibki is an open-source and straightforward grid system based on Flexbox.
 
 - [Installation](#installation)
   - [Download](#download)
-  - [Package managers](#package-managers)
+  - [Package Managers](#package-managers)
 - [Usage](#usage)
   - [General](#general)
   - [Nesting](#nesting)
-  - [Responsive layouts](#responsive-layouts)
+  - [Responsive Layouts](#responsive-layouts)
   - [Wrapping](#wrapping)
   - [Gutters](#gutters)
   - [Directions](#directions)
-  - [Horizontal alignment](#horizontal-alignment)
-  - [Vertical alignment](#vertical-alignment)
+  - [Horizontal Alignment](#horizontal-alignment)
+  - [Vertical Alignment](#vertical-alignment)
   - [Reordering](#reordering)
-- [Browser support](#browser-support)
+- [Browser Support](#browser-support)
 
 ## Installation
 
 ### Download
 
-CSS: `css/flex.min.css` minified, or `css/flex.css` un-minified
+CSS: `css/flex.min.css` (minified) or `css/flex.css` (un-minified)
 
-### Package managers
+### Package Managers
 
-You can install Gibki through npm or yarn like any other dependency:
+You can install Gibki via npm or yarn just like any other dependency:
 
 ```shell
 npm install gibki --save
@@ -39,7 +39,7 @@ npm install gibki --save
 yarn add gibki
 ```
 
-Then you can import Gibki in your Sass codebase:
+Then, you can import Gibki in your Sass codebase:
 
 ```scss
 @import
@@ -52,7 +52,7 @@ Then you can import Gibki in your Sass codebase:
 
 #### .container
 
-Containers provide a means to center content. Use `.container` for a responsive width:
+Containers provide a way to center content. Use `.container` for a responsive width:
 
 ![](https://rqrauhvmra.com/gibki/img/container.png)
 
@@ -62,7 +62,7 @@ Containers provide a means to center content. Use `.container` for a responsive 
 </div>
 ```
 
-And if necessary additionally with `.container--small` for a smaller width:
+If needed, you can also use `.container--small` for a smaller width:
 
 ![](https://rqrauhvmra.com/gibki/img/container--small.png)
 
@@ -86,7 +86,7 @@ And if necessary additionally with `.container--small` for a smaller width:
 
 #### .flex__
 
-`.flex__` classes creates differend column sizes.
+`.flex__` classes create different column sizes.
 
 ![](https://rqrauhvmra.com/gibki/img/flex__.png)
 
@@ -105,7 +105,7 @@ And if necessary additionally with `.container--small` for a smaller width:
 
 #### .flex__auto
 
-`.flex__auto` creates columns that will take up however much space is left.
+`.flex__auto` creates columns that take up the remaining space.
 
 ![](https://rqrauhvmra.com/gibki/img/flex__auto.png)
 
@@ -123,7 +123,7 @@ And if necessary additionally with `.container--small` for a smaller width:
 
 ### Nesting
 
-To nest your content with the default grid, add a new `.flex` container and set of `.flex__` columns within an existing `.flex__` column.
+To nest content with the default grid, add a new `.flex` container and a set of `.flex__` columns within an existing `.flex__` column.
 
 ![](https://rqrauhvmra.com/gibki/img/nesting.png)
 
@@ -144,7 +144,7 @@ To nest your content with the default grid, add a new `.flex` container and set 
 
 ### Responsive layouts
 
-The grid system lets you create responsive layouts by giving you the option to define different column widths for each viewport. Four different breakpoints determine the viewports.
+The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:
 
 - &#x3E;= 500px: Small `sm`
 - &#x3E;= 700px: Medium `md`
@@ -162,6 +162,19 @@ The grid system lets you create responsive layouts by giving you the option to d
     <div class="flex__md-6 flex__lg-3"></div>
   </div>
 </div>
+```
+
+These breakpoints can be customized/expanded using SCSS variables:
+
+```scss
+// Breakpoints map
+// Based on 16px
+$gibki-breakpoints: (
+  'sm': 31.25em, // 500px
+  'md': 43.75em, // 700px
+  'lg': 62.5em,  // 1000px
+  'xl': 75em     // 1200px
+);
 ```
 
 ### Wrapping
@@ -211,7 +224,16 @@ The columns will not wrap.
 
 ### Gutters
 
-The columns have horizontal and vertical padding to create the gutters between individual columns and rows. You can remove the margin from the wrapper and the padding from the columns and rows with `.flex--no-gutters`.
+The columns and rows have horizontal and vertical spacing. These can be customized using CSS Custom properties.
+
+```css
+  // Gutter width
+  // Based on 16px
+  --gibki-gutter-vertical: 1.5rem; // 24px
+  --gibki-gutter-horizontal: 1.5rem; // 24px
+```
+
+You can remove the spacing with `.flex--no-gutters`.
 
 ![](https://rqrauhvmra.com/gibki/img/gutters.png)
 
@@ -241,7 +263,7 @@ You can also only remove the horizontal gutters with `.flex--no-horizontal-gutte
 </div>
 ```
 
-Or only remove the vertical gutters with `.flex--no-vertical-gutters`.
+Or you remove only the vertical gutters with `.flex--no-vertical-gutters`.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--no-vertical-gutters.png)
 
@@ -258,7 +280,7 @@ Or only remove the vertical gutters with `.flex--no-vertical-gutters`.
 
 ### Directions
 
-The following classes define the direction in which the columns are placed in the wrapper. By default, columns are set left to right in `ltr` and right to left in `rtl`.
+The following classes define the direction in which the columns are placed within the wrapper. By default, columns are set from left to right in `ltr` (left-to-right languages) and from right to left in `rtl` (right-to-left languages).
 
 ![](https://rqrauhvmra.com/gibki/img/directions.png)
 
@@ -273,7 +295,7 @@ The following classes define the direction in which the columns are placed in th
 
 #### .flex--row-reverse
 
-`row-reverse` sets the direction, right to left in `ltr` and left to right in `rtl`.
+The columns are placed from right to left in `ltr` and left to right in `rtl`.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--row-reverse.png)
 
@@ -288,7 +310,7 @@ The following classes define the direction in which the columns are placed in th
 
 #### .flex--column
 
-`.flex--column` behaves the same way as `.flex--row` but top to bottom.
+`.flex--column` behaves the same way as `.flex--row` but the columns are stacked from top to bottom.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--column.png)
 
@@ -303,7 +325,7 @@ The following classes define the direction in which the columns are placed in th
 
 #### .flex--column-reverse
 
-`.flex--column-reverse` behaves the same way as `.flex--row-reverse` but bottom to top.
+`.flex--column-reverse` behaves the same way as `.flex--row-reverse` but the columns are stacked from bottom to top.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--column-reverse.png)
 
@@ -316,9 +338,9 @@ The following classes define the direction in which the columns are placed in th
 </div>
 ```
 
-### Horizontal alignment
+### Horizontal Alignment
 
-The following classes define how columns are aligned along the main axis. It helps distribute extra space between the items when they don't reach their maximum size. By default, columns are positioned at the beginning of the container.
+The following classes define how columns are aligned along the main axis. They help distribute extra space between the items when they don't reach their maximum size. By default, columns are positioned at the beginning of the container.
 
 ![](https://rqrauhvmra.com/gibki/img/horizontal-alignment.png)
 
@@ -366,7 +388,7 @@ The columns are positioned at the center of the container.
 
 #### .flex--space-between
 
-The columns are evenly spread horizontally; the first column is at the beginning of the container, the last column on the end of the container. Thus, space gets distributed between the columns.
+The columns are evenly spread horizontally; the first column is at the beginning of the container, and the last column is at the end of the container. Space is distributed between the columns.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--space-between.png)
 
@@ -396,13 +418,13 @@ The columns are positioned with equal space before, between, and after them.
 </div>
 ```
 
-### Vertical alignment
+### Vertical Alignment
 
 The following classes define how columns are aligned along the cross axis when they don't reach their maximum size.
 
 #### .flex--stretch
 
-This is the default value. You don't need to add the class to the wrapper; it stretches the height of the columns to fill the container but still respects `min-width` and `max-width`.
+This is the default value. You don't need to add the class to the wrapper; it stretches the height of the columns to fill the container while respecting `min-width` and `max-width`.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--stretch.png)
 
@@ -522,7 +544,7 @@ You can also apply `.flex--middle` to individual columns.
 
 ### Reordering
 
-Use `.flex--order-` classes for controlling the visual order of your content.
+Use `.flex--order-` classes to control the visual order of your content.
 
 ![](https://rqrauhvmra.com/gibki/img/reordering.png)
 
@@ -557,7 +579,7 @@ Offset a column by adding `.flex--offset-` classes.
 </div>
 ```
 
-## Browser support
+## Browser Support
 
 Gibki supports the following browser (all the latest versions):
 
