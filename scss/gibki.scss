@@ -82,6 +82,10 @@
 
   // Directions
 
+  &--row {
+    flex-direction: row;
+  }
+
   &--row-reverse {
     flex-direction: row-reverse;
   }
@@ -96,6 +100,10 @@
 
   // Wrapping
 
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
   &--wrap-reverse {
     flex-wrap: wrap-reverse;
   }
@@ -105,6 +113,10 @@
   }
 
   // Horizontal alignment
+
+  &--left {
+    justify-content: flex-start;
+  }
 
   &--center {
     justify-content: center;
@@ -125,6 +137,7 @@
   // Vertical alignment
 
   &--stretch {
+    align-items: stretch;
 
     .flex > & {
       align-self: stretch;

@@ -54,6 +54,9 @@
 .flex--no-vertical-gutters {
   --gibki-gutter-vertical: 0rem;
 }
+.flex--row {
+  flex-direction: row;
+}
 .flex--row-reverse {
   flex-direction: row-reverse;
 }
@@ -63,11 +66,17 @@
 .flex--column-reverse {
   flex-direction: column-reverse;
 }
+.flex--wrap {
+  flex-wrap: wrap;
+}
 .flex--wrap-reverse {
   flex-wrap: wrap-reverse;
 }
 .flex--nowrap {
   flex-wrap: nowrap;
+}
+.flex--left {
+  justify-content: flex-start;
 }
 .flex--center {
   justify-content: center;
@@ -80,6 +89,9 @@
 }
 .flex--space-around {
   justify-content: space-around;
+}
+.flex--stretch {
+  align-items: stretch;
 }
 .flex > .flex--stretch {
   align-self: stretch;
