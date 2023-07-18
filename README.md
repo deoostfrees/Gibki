@@ -72,6 +72,14 @@ If needed, you can also use `.container--small` for a smaller width:
 </div>
 ```
 
+or `.container--full-width` for a full width container:
+
+```html
+<div class="container container--full-width">
+
+</div>
+```
+
 #### .flex
 
 `.flex` is the wrapper for columns.
@@ -164,7 +172,7 @@ The grid system allows you to create responsive layouts by defining different co
 </div>
 ```
 
-These breakpoints can be customized/expanded using SCSS variables:
+These breakpoints can be customized using Sass variables:
 
 ```scss
 // Breakpoints map
@@ -224,7 +232,7 @@ The columns will not wrap.
 
 ### Gutters
 
-The columns and rows have horizontal and vertical spacing. These can be customized using CSS Custom properties:
+The columns and rows have horizontal and vertical spacing. These can be customized using CSS custom properties:
 
 ```css
   // Gutter width
