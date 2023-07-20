@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.0] - 2023-07-?
+## [3.0.0] - 2023-07-20
 
 ### Added
 
 - Add changelog section to keep track of changes.
 - Add CSS custom properties for container widths and gutters between columns and rows.
 - Add demo file.
-- Add classes for flexbox defaults.
+- Add classes for Flexbox defaults.
 
 ### Changed
 
