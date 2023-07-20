@@ -19,6 +19,9 @@ Gibki is an open-source grid system based on Flexbox.
   - [Horizontal Alignment](#horizontal-alignment)
   - [Vertical Alignment](#vertical-alignment)
   - [Reordering](#reordering)
+- [Variables](#variables)
+  - [CSS custom properties](#css-custom-properties)
+  - [Sass variables](#sass-variables)
 - [Browser Support](#browser-support)
 
 ## Installation
@@ -32,7 +35,7 @@ CSS: `css/flex.min.css` (minified) or `css/flex.css` (un-minified)
 You can install Gibki via npm or yarn just like any other dependency:
 
 ```shell
-npm install gibki --save
+npm install gibki
 ```
 
 ```shell
@@ -159,6 +162,8 @@ The grid system allows you to create responsive layouts by defining different co
 - &#x3E;= 1000px: Large `lg`
 - &#x3E;= 1200px: Extra large `xl`
 
+These breakpoints can be customized using [Sass variables](#sass-variables).
+
 ![](https://rqrauhvmra.com/gibki/img/responsive-layouts.png)
 
 ```html
@@ -170,19 +175,6 @@ The grid system allows you to create responsive layouts by defining different co
     <div class="flex__md-6 flex__lg-3"></div>
   </div>
 </div>
-```
-
-These breakpoints can be customized using Sass variables:
-
-```scss
-// Breakpoints map
-// Based on 16px
-$gibki-breakpoints: (
-  'sm': 31.25em, // 500px
-  'md': 43.75em, // 700px
-  'lg': 62.5em,  // 1000px
-  'xl': 75em     // 1200px
-);
 ```
 
 ### Wrapping
@@ -232,14 +224,7 @@ The columns will not wrap.
 
 ### Gutters
 
-The columns and rows have horizontal and vertical spacing. These can be customized using CSS custom properties:
-
-```css
-  // Gutter width
-  // Based on 16px
-  --gibki-gutter-vertical: 1.5rem; // 24px
-  --gibki-gutter-horizontal: 1.5rem; // 24px
-```
+The columns and rows have horizontal and vertical spacing. These can be customized using [CSS custom properties](#css-custom-properties).
 
 You can remove the spacing with `.flex--no-gutters`.
 
@@ -585,6 +570,42 @@ Offset a column by adding `.flex--offset-` classes.
     <div class="flex__6 flex--offset-lg-2"></div>
   </div>
 </div>
+```
+
+## Variables
+
+### CSS custom properties
+
+```css
+  // Container max width
+  // Based on 16px
+  --gibki-container-max-width: 75rem; // 1200px
+  --gibki-small-container-max-width: 38.25rem; // 612px
+
+  // Container padding
+  // Based on 16px
+  --gibki-container-padding: 1.5rem; // 24px
+
+  // Gutter width
+  // Based on 16px
+  --gibki-gutter-vertical: 1.5rem; // 24px
+  --gibki-gutter-horizontal: 1.5rem; // 24px
+```
+
+### Sass variables
+
+```scss
+// Breakpoints map
+// Based on 16px
+$gibki-breakpoints: (
+  'sm': 31.25em, // 500px
+  'md': 43.75em, // 700px
+  'lg': 62.5em,  // 1000px
+  'xl': 75em     // 1200px
+);
+
+// Available columns
+$gibki-columns: 12;
 ```
 
 ## Browser Support
