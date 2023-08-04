@@ -75,10 +75,10 @@ If needed, you can also use `.container--small` for a smaller width:
 </div>
 ```
 
-or `.container--full-width` for a full width container:
+or `.container--full` for a full width container:
 
 ```html
-<div class="container container--full-width">
+<div class="container container--full">
 
 </div>
 ```
