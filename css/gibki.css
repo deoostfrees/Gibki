@@ -26,10 +26,12 @@
 .container--small {
   max-inline-size: var(--gibki-small-container-max-width);
 }
-.container--full-width {
+.container--full, .container--full-width {
   max-inline-size: none;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
-.container .container {
+.container:not(.container--full, .container--full-width) .container {
   padding-inline-start: 0;
   padding-inline-end: 0;
 }

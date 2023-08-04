@@ -42,11 +42,14 @@
     max-inline-size: var(--gibki-small-container-max-width);
   }
 
+  &--full,
   &--full-width {
     max-inline-size: none;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
   }
 
-  & & {
+  &:not(.container--full, .container--full-width) & {
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
