@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2023-08-
+
+### Added
+
+- Add class `container--full` as replacement for class `container--full-width` (deprecated).
+
+### Changed
+
+- Remove inline start and end padding only if a container is nested in a container without a class for full width.
+
 ## [3.0.0] - 2023-07-20
 
 ### Added
