@@ -2,11 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.1.0] - 2023-08-
+## [3.1.0] - 2023-09-17
 
 ### Added
 
-- Add class `container--full` as replacement for class `container--full-width` (deprecated).
+- Add class `container--full` as a replacement for class `container--full-width` (deprecated).
 
 ### Changed
 
