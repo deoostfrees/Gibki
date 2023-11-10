@@ -1,4 +1,9 @@
-@use "sass:math";
+@use
+  'sass:math';
+@import
+  'variables',
+  'functions',
+  'mixins';
 
 /**
  * Gibki
@@ -23,11 +28,6 @@
   --gibki-gutter-vertical: 1.5rem; // 24px
   --gibki-gutter-horizontal: 1.5rem; // 24px
 }
-
-@import
-  'variables',
-  'functions',
-  'mixins';
 
 .container {
   inline-size: 100%;
@@ -63,10 +63,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   row-gap: var(--gibki-gutter-vertical);
-}
-
-.flex {
-
 
 
   // Gutters
@@ -191,11 +187,11 @@
   flex: 1;
 }
 
-@include flex__();
+@include flex__;
 
 // Reordering
-@include flex--order-();
-@include flex--offset-();
+@include flex--order-;
+@include flex--offset-;
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
