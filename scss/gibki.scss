@@ -1,4 +1,9 @@
-@use "sass:math";
+@use
+  'sass:math';
+@import
+  'variables',
+  'functions',
+  'mixins';
 
 /**
  * Gibki
@@ -24,18 +29,10 @@
   --gibki-gutter-horizontal: 1.5rem; // 24px
 }
 
-@import
-  'variables',
-  'functions',
-  'mixins';
-
 .container {
-  inline-size: 100%;
-  margin-inline-end: auto;
-  margin-inline-start: auto;
+  margin-inline: auto;
   max-inline-size: var(--gibki-container-max-width);
-  padding-inline-end: var(--gibki-container-padding);
-  padding-inline-start: var(--gibki-container-padding);
+  padding-inline: var(--gibki-container-padding);
 
 
   &--small {
@@ -46,12 +43,10 @@
   &--full-width {
     max-inline-size: none;
     padding-inline-end: 0;
-    padding-inline-start: 0;
   }
 
   &:not(.container--full, .container--full-width) & {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+    padding-inline: 0;
   }
 }
 
@@ -63,10 +58,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   row-gap: var(--gibki-gutter-vertical);
-}
-
-.flex {
-
 
 
   // Gutters
@@ -191,11 +182,11 @@
   flex: 1;
 }
 
-@include flex__();
+@include flex__;
 
 // Reordering
-@include flex--order-();
-@include flex--offset-();
+@include flex--order-;
+@include flex--offset-;
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
