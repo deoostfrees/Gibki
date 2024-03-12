@@ -7,15 +7,15 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
-    "rollup": "^4.12.0",
-    "rollup-plugin-license": "^3.2.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-license": "^3.3.1",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.71.1",
     "stylelint": "^16.2.1",
     "stylelint-config-standard-scss": "^13.0.0",
-    "stylelint-scss": "^6.1.0"
+    "stylelint-scss": "^6.2.1"
   },
   "browserslist": [
     "last 2 versions",
