@@ -16,12 +16,9 @@
 }
 
 .container {
-  inline-size: 100%;
-  margin-inline-end: auto;
-  margin-inline-start: auto;
+  margin-inline: auto;
   max-inline-size: var(--gibki-container-max-width);
-  padding-inline-end: var(--gibki-container-padding);
-  padding-inline-start: var(--gibki-container-padding);
+  padding-inline: var(--gibki-container-padding);
 }
 .container--small {
   max-inline-size: var(--gibki-small-container-max-width);
@@ -29,11 +26,9 @@
 .container--full, .container--full-width {
   max-inline-size: none;
   padding-inline-end: 0;
-  padding-inline-start: 0;
 }
 .container:not(.container--full, .container--full-width) .container {
-  padding-inline-start: 0;
-  padding-inline-end: 0;
+  padding-inline: 0;
 }
 
 .flex {
