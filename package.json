@@ -9,12 +9,12 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "rollup": "^4.13.2",
+    "rollup": "^4.14.1",
     "rollup-plugin-license": "^3.3.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.72.0",
+    "sass": "^1.74.1",
     "stylelint": "^16.3.1",
-    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.2.1"
   },
   "browserslist": [
