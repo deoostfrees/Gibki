@@ -183,14 +183,12 @@
 }
 
 @include flex__;
-
-// Reordering
 @include flex--order-;
 @include flex--offset-;
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
-  @media screen and (min-width: breakpoint(#{$key})) {
+  @media screen and (width >= breakpoint(#{$key})) {
     @include flex__(#{$key});
     @include flex--offset-(#{$key});
     @include flex--order-(#{$key});
