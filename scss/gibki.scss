@@ -30,23 +30,22 @@
 }
 
 .container {
+  inline-size: min(100% - var(--gibki-container-padding) *2, var(--gibki-container-max-width));
   margin-inline: auto;
-  max-inline-size: var(--gibki-container-max-width);
-  padding-inline: var(--gibki-container-padding);
 
 
   &--small {
-    max-inline-size: var(--gibki-small-container-max-width);
+    inline-size: min(100% - var(--gibki-container-padding) *2, var(--gibki-small-container-max-width));
   }
 
   &--full,
   &--full-width {
-    max-inline-size: none;
-    padding-inline-end: 0;
+    inline-size: 100%;
   }
 
+  // No padding for .container in .container
   &:not(.container--full, .container--full-width) & {
-    padding-inline: 0;
+    inline-size: min(100%, var(--gibki-container-max-width));
   }
 }
 
