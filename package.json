@@ -9,13 +9,13 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "rollup": "^4.14.1",
-    "rollup-plugin-license": "^3.3.1",
+    "rollup": "^4.17.2",
+    "rollup-plugin-license": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.74.1",
-    "stylelint": "^16.3.1",
+    "sass": "^1.77.2",
+    "stylelint": "^16.5.0",
     "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-scss": "^6.2.1"
+    "stylelint-scss": "^6.3.0"
   },
   "browserslist": [
     "last 2 versions",
@@ -23,7 +23,7 @@
     "not dead"
   ],
   "scripts": {
-    "build": "rollup -c --environment BUILD --bundleConfigAsCjs",
+    "build": "npm run test && rollup -c --environment BUILD --bundleConfigAsCjs",
     "buildWatch": "rollup -c -w --environment BUILD --bundleConfigAsCjs",
     "test": "stylelint \"scss/gibki.scss\""
   },
