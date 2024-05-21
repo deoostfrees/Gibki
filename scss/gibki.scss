@@ -30,12 +30,12 @@
 }
 
 .container {
-  inline-size: min(100% - var(--gibki-container-padding) *2, var(--gibki-container-max-width));
+  inline-size: min(100% - var(--gibki-container-padding) * 2, var(--gibki-container-max-width));
   margin-inline: auto;
 
 
   &--small {
-    inline-size: min(100% - var(--gibki-container-padding) *2, var(--gibki-small-container-max-width));
+    inline-size: min(100% - var(--gibki-container-padding) * 2, var(--gibki-small-container-max-width));
   }
 
   &--full,
