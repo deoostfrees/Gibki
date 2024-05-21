@@ -16,19 +16,17 @@
 }
 
 .container {
+  inline-size: min(100% - var(--gibki-container-padding) * 2, var(--gibki-container-max-width));
   margin-inline: auto;
-  max-inline-size: var(--gibki-container-max-width);
-  padding-inline: var(--gibki-container-padding);
 }
 .container--small {
-  max-inline-size: var(--gibki-small-container-max-width);
+  inline-size: min(100% - var(--gibki-container-padding) * 2, var(--gibki-small-container-max-width));
 }
 .container--full, .container--full-width {
-  max-inline-size: none;
-  padding-inline-end: 0;
+  inline-size: 100%;
 }
 .container:not(.container--full, .container--full-width) .container {
-  padding-inline: 0;
+  inline-size: min(100%, var(--gibki-container-max-width));
 }
 
 .flex {
