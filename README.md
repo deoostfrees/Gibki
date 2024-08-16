@@ -1,6 +1,6 @@
 # Gibki
 
-Gibki is an open-source grid system based on Flexbox.
+Gibki is an open source grid system based on Flexbox.
 
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
