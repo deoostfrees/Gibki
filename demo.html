@@ -125,7 +125,7 @@
     <div class="container">
       <h1>Gibki</h1>
 
-      <p>Gibki is an open source grid system based on Flexbox.</p>
+      <p>A modern grid system based on Flexbox using container queries.</p>
 
       <h2>General</h2>
 
@@ -243,7 +243,7 @@
 
       <h2>Responsive Layouts</h2>
 
-      <p>The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:</p>
+      <p>The grid system uses container queries to create responsive layouts based on the container's (<code>.flex</code>) size rather than the viewport width.</p>
 
       <ul>
         <li>&#x3E;= 500px: Small <code>sm</code></li>
@@ -269,7 +269,7 @@
   &#x3C;div class=&#x22;flex__md-6 flex__lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</pre>
 
-      <p>These breakpoints can be customized/expanded using <a href="#sass-variables">Sass variables</a>.</p>
+      <p>These container breakpoints can be customized using <a href="#sass-variables">Sass variables</a>.</p>
 
       <h2>Wrapping</h2>
 
@@ -719,7 +719,7 @@
   &#x3C;div class=&#x22;flex__6 flex--order-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</pre>
 
-      <h3>Offsetting columns</h3>
+      <h3>Offsetting Columns</h3>
 
       <p>Offset a column by adding <code>.flex--offset-</code> classes.</p>
 
@@ -744,7 +744,7 @@
 
       <h2>Variables</h2>
 
-      <h3 id="css-custom-properties">CSS custom properties</h3>
+      <h3 id="css-custom-properties">CSS Custom Properties</h3>
 
       <pre>
 // Container max width
@@ -761,7 +761,7 @@
 --gibki-gutter-vertical: 1.5rem; // 24px
 --gibki-gutter-horizontal: 1.5rem; // 24px</pre>
 
-      <h3 id="sass-variables">Sass variables</h3>
+      <h3 id="sass-variables">Sass Variables</h3>
 
       <pre>
 // Breakpoints map
