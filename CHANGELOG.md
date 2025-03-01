@@ -1,11 +1,10 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-## [3.2.0] - 2024-
+## [4.0.0] - 2025-
 
 ### Changed
 
+- **Breaking:** Use container queries instead of media queries. 2bdc620 @deoostfrees
 - Use CSS `min` instead of `padding` on the `.container` class. f1e29c4 @deoostfrees
 - Use media query range syntax. d251612 @deoostfrees
 
