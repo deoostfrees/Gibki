@@ -1,10 +1,10 @@
 # Gibki
 
-Gibki is an open source grid system based on Flexbox.
+A modern grid system based on Flexbox using container queries.
 
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
-## Table of contents
+## Table of Contents
 
 - [Installation](#installation)
   - [Download](#download)
@@ -20,8 +20,8 @@ Gibki is an open source grid system based on Flexbox.
   - [Vertical Alignment](#vertical-alignment)
   - [Reordering](#reordering)
 - [Variables](#variables)
-  - [CSS custom properties](#css-custom-properties)
-  - [Sass variables](#sass-variables)
+  - [CSS Custom Properties](#css-custom-properties)
+  - [Sass Variables](#sass-variables)
 - [Browser Support](#browser-support)
 
 ## Installation
@@ -55,7 +55,7 @@ Then, you can import Gibki in your Sass codebase:
 
 #### .container
 
-Containers provide a way to center content. Use `.container` for a responsive width:
+Containers are not required for the grid, but provide a way to centre content. The width can be customised using [CSS custom properties](#css-custom-properties).
 
 ![](https://rqrauhvmra.com/gibki/img/container.png)
 
@@ -153,16 +153,16 @@ To nest content with the default grid, add a new `.flex` container and a set of 
 </div>
 ```
 
-### Responsive layouts
+### Responsive Layouts
 
-The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:
+The grid system uses container queries to create responsive layouts based on the container's (`.flex`) size rather than the viewport width.
 
 - &#x3E;= 500px: Small `sm`
 - &#x3E;= 700px: Medium `md`
 - &#x3E;= 1000px: Large `lg`
 - &#x3E;= 1200px: Extra large `xl`
 
-These breakpoints can be customized using [Sass variables](#sass-variables).
+These container breakpoints can be customized using [Sass variables](#sass-variables).
 
 ![](https://rqrauhvmra.com/gibki/img/responsive-layouts.png)
 
@@ -554,7 +554,7 @@ Use `.flex--order-` classes to control the visual order of your content.
 </div>
 ```
 
-#### Offsetting columns
+#### Offsetting Columns
 
 Offset a column by adding `.flex--offset-` classes.
 
@@ -574,7 +574,7 @@ Offset a column by adding `.flex--offset-` classes.
 
 ## Variables
 
-### CSS custom properties
+### CSS Custom Properties
 
 ```css
   // Container max width
@@ -592,7 +592,7 @@ Offset a column by adding `.flex--offset-` classes.
   --gibki-gutter-horizontal: 1.5rem; // 24px
 ```
 
-### Sass variables
+### Sass Variables
 
 ```scss
 // Breakpoints map
@@ -613,6 +613,6 @@ $gibki-columns: 12;
 Gibki supports the following browser (all the latest versions):
 
 - Chrome
-- Edge
 - Firefox
 - Safari
+- Edge
