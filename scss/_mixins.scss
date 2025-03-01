@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use 'variables' as *;
+
 // flex__
 @mixin flex__($gibki-breakpoint: null) {
   $breakpoint: if($gibki-breakpoint == null, null, #{$gibki-breakpoint}-);

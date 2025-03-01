@@ -1,9 +1,5 @@
-@use
-  'sass:math';
-@import
-  'variables',
-  'functions',
-  'mixins';
+@use 'variables' as *;
+@use 'mixins';
 
 /**
  * Gibki
@@ -35,7 +31,7 @@
 
 
   &--small {
-    inline-size: min(100% - var(--gibki-container-padding) * 2, var(--gibki-small-container-max-width));
+    --gibki-container-max-width: var(--gibki-small-container-max-width);
   }
 
   &--full,
@@ -52,6 +48,8 @@
 .flex {
   align-items: stretch;
   column-gap: var(--gibki-gutter-horizontal);
+  container-name: gibki;
+  container-type: inline-size;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -181,15 +179,15 @@
   flex: 1;
 }
 
-@include flex__;
-@include flex--order-;
-@include flex--offset-;
+@include mixins.flex__;
+@include mixins.flex--order-;
+@include mixins.flex--offset-;
 
 // Responsive
 @each $key, $breakpoint in $gibki-breakpoints {
-  @media screen and (width >= breakpoint(#{$key})) {
-    @include flex__(#{$key});
-    @include flex--offset-(#{$key});
-    @include flex--order-(#{$key});
+  @container gibki (width >= #{$breakpoint}) {
+    @include mixins.flex__(#{$key});
+    @include mixins.flex--offset-(#{$key});
+    @include mixins.flex--order-(#{$key});
   }
 }
