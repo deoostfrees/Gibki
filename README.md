@@ -1,6 +1,6 @@
 # Gibki
 
-A modern grid system based on Flexbox using container queries.
+An open source grid system based on Flexbox using container queries.
 
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
@@ -32,22 +32,19 @@ CSS: `css/flex.min.css` (minified) or `css/flex.css` (un-minified)
 
 ### Package Managers
 
-You can install Gibki via npm or yarn just like any other dependency:
+You can also install Gibki using npm or yarn:
 
 ```shell
 npm install gibki
 ```
 
+or
+
 ```shell
 yarn add gibki
 ```
 
-Then, you can import Gibki in your Sass codebase:
-
-```scss
-@import
-  '~gibki/scss/gibki';
-```
+Be sure to include the corresponding SCSS or CSS file.
 
 ## Usage
 

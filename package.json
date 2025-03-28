@@ -1,7 +1,7 @@
 {
   "name": "gibki",
   "version": "4.0.0",
-  "description": "Gibki is an open source grid system based on Flexbox.",
+  "description": "An open source grid system based on Flexbox using container queries.",
   "main": "css/gibki.css",
   "style": "css/gibki.css",
   "devDependencies": {
