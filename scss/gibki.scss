@@ -34,13 +34,12 @@
     --gibki-container-max-width: var(--gibki-small-container-max-width);
   }
 
-  &--full,
-  &--full-width {
+  &--full {
     inline-size: 100%;
   }
 
   // No padding for .container in .container
-  &:not(.container--full, .container--full-width) & {
+  &:not(.container--full) & {
     inline-size: min(100%, var(--gibki-container-max-width));
   }
 }
@@ -72,7 +71,6 @@
   }
 
   // Directions
-
   &--row {
     flex-direction: row;
   }
@@ -90,7 +88,6 @@
   }
 
   // Wrapping
-
   &--wrap {
     flex-wrap: wrap;
   }
@@ -104,7 +101,6 @@
   }
 
   // Horizontal alignment
-
   &--left {
     justify-content: flex-start;
   }
@@ -126,7 +122,6 @@
   }
 
   // Vertical alignment
-
   &--stretch {
     align-items: stretch;
 
@@ -169,7 +164,6 @@
 }
 
 // flex__*
-
 [class*='flex__'] {
   box-sizing: border-box;
   inline-size: 100%;
