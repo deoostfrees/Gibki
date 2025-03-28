@@ -3,7 +3,7 @@
 An open source grid system based on Flexbox using container queries.
 
 > [!NOTE]
-> This version uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width.
+> This version uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width. If you want to use media queries, use [version 3.1.0](https://github.com/deoostfrees/Gibki/tree/v3.1.0).
 
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
