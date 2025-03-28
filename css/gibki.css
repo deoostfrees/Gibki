@@ -22,10 +22,10 @@
 .container--small {
   --gibki-container-max-width: var(--gibki-small-container-max-width);
 }
-.container--full, .container--full-width {
+.container--full {
   inline-size: 100%;
 }
-.container:not(.container--full, .container--full-width) .container {
+.container:not(.container--full) .container {
   inline-size: min(100%, var(--gibki-container-max-width));
 }
 
