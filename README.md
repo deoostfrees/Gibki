@@ -2,6 +2,9 @@
 
 An open source grid system based on Flexbox using container queries.
 
+> [!NOTE]
+> This version uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width.
+
 [Open in CodePen](https://codepen.io/collection/pgogaZ)
 
 ## Table of Contents
