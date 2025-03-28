@@ -1,11 +1,9 @@
 # Gibki
 
-An open source grid system based on Flexbox using container queries.
+An open source grid system based on Flexbox using container queries. [Open in CodePen](https://codepen.io/collection/pgogaZ).
 
 > [!NOTE]
-> This version uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width. If you want to use media queries, use [version 3.1.0](https://github.com/deoostfrees/Gibki/tree/v3.1.0).
-
-[Open in CodePen](https://codepen.io/collection/pgogaZ)
+> This version (4.x.x) uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width. If you want to use media queries, use [version 3.1.0](https://github.com/deoostfrees/Gibki/tree/v3.1.0).
 
 ## Table of Contents
 
@@ -55,7 +53,7 @@ Be sure to include the corresponding SCSS or CSS file.
 
 #### .container
 
-Containers are not required for the grid, but provide a way to centre content. The width can be customised using [CSS custom properties](#css-custom-properties).
+Containers are not required for the grid, but provide a way to center content. The width can be customize using [CSS custom properties](#css-custom-properties).
 
 ![](https://rqrauhvmra.com/gibki/img/container.png)
 
@@ -256,7 +254,7 @@ You can also only remove the horizontal gutters with `.flex--no-horizontal-gutte
 </div>
 ```
 
-Or you remove only the vertical gutters with `.flex--no-vertical-gutters`.
+Or you can remove only the vertical gutters with `.flex--no-vertical-gutters`.
 
 ![](https://rqrauhvmra.com/gibki/img/flex--no-vertical-gutters.png)
 
@@ -577,19 +575,19 @@ Offset a column by adding `.flex--offset-` classes.
 ### CSS Custom Properties
 
 ```css
-  // Container max width
-  // Based on 16px
-  --gibki-container-max-width: 75rem; // 1200px
-  --gibki-small-container-max-width: 38.25rem; // 612px
+  /* Container max width */
+  /* Based on 16px */
+  --gibki-container-max-width: 75rem; /* 1200px */
+  --gibki-small-container-max-width: 38.25rem; /* 612px */
 
-  // Container padding
-  // Based on 16px
-  --gibki-container-padding: 1.5rem; // 24px
+  /* Container padding */
+  /* Based on 16px */
+  --gibki-container-padding: 1.5rem; /* 24px */
 
-  // Gutter width
-  // Based on 16px
-  --gibki-gutter-vertical: 1.5rem; // 24px
-  --gibki-gutter-horizontal: 1.5rem; // 24px
+  /* Gutter width */
+  /* Based on 16px */
+  --gibki-gutter-vertical: 1.5rem; /* 24px */
+  --gibki-gutter-horizontal: 1.5rem; /* 24px */
 ```
 
 ### Sass Variables
@@ -610,7 +608,7 @@ $gibki-columns: 12;
 
 ## Browser Support
 
-Gibki supports the following browser (all the latest versions):
+Gibki supports the following browsers (all the latest versions):
 
 - Chrome
 - Firefox
