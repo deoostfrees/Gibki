@@ -1,12 +1,16 @@
 # Changelog
 
-## [4.0.0] - 2025-
+## [4.0.0] - 2025-03-
 
 ### Changed
 
 - **Breaking:** Use container queries instead of media queries. 2bdc620 @deoostfrees
 - Use CSS `min` instead of `padding` on the `.container` class. f1e29c4 @deoostfrees
 - Use media query range syntax. d251612 @deoostfrees
+
+### Removed
+
+- **Breaking:** - Deprecated `container--full-width` class.  a50824b @deoostfrees
 
 ## [3.1.0] - 2023-09-17
 
