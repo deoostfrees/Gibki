@@ -1,11 +1,24 @@
+$use-container-queries: true !default;
+
+$gibki-breakpoints: () !default;
+
 // Breakpoints map
 // Based on 16px
-$gibki-breakpoints: (
-  'sm': 31.25rem, // 500px
-  'md': 43.75rem, // 700px
-  'lg': 62.5rem,  // 1000px
-  'xl': 75rem     // 1200px
-) !default;
+@if $use-container-queries {
+  $gibki-breakpoints: (
+    'sm': 31.25rem, // 500px
+    'md': 43.75rem, // 700px
+    'lg': 62.5rem,  // 1000px
+    'xl': 75rem     // 1200px
+  ) !global;
+} @else {
+  $gibki-breakpoints: (
+    'sm': 31.25em,  // 500px
+    'md': 43.75em,  // 700px
+    'lg': 62.5em,   // 1000px
+    'xl': 75em      // 1200px
+  ) !global;
+}
 
 // Available columns
 $gibki-columns: 12 !default;

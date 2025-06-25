@@ -129,7 +129,7 @@
     <div class="container">
       <h1>Gibki</h1>
 
-      <p>An open source grid system based on Flexbox using container queries.</p>
+      <p>An open source grid system based on Flexbox.</p>
 
       <h2>General</h2>
 
@@ -247,7 +247,7 @@
 
       <h2>Responsive Layouts</h2>
 
-      <p>The grid system uses container queries to create responsive layouts based on the container's (<code>.flex</code>) size rather than the viewport width.</p>
+      <p>The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:</p>
 
       <ul>
         <li>&#x3E;= 500px: Small <code>sm</code></li>
@@ -768,13 +768,17 @@
       <h3 id="sass-variables">Sass Variables</h3>
 
       <pre>
+$use-container-queries: true !default;
+
 // Breakpoints map
+// Container queries are based on the container's width (rem).
+// Media queries are based on the viewport width (em).
 // Based on 16px
 $gibki-breakpoints: (
-  'sm': 31.25rem, // 500px
-  'md': 43.75rem, // 700px
-  'lg': 62.5rem,  // 1000px
-  'xl': 75rem     // 1200px
+  'sm': 31.25rem, // 31.25em (500px) if $use-container-queries is false
+  'md': 43.75rem, // 43.75em (700px) if $use-container-queries is false
+  'lg': 62.5rem,  // 62.5em (1000px) if $use-container-queries is false
+  'xl': 75rem     // 75em (1200px) if $use-container-queries is false
 );
 
 // Available columns
