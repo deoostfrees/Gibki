@@ -1,9 +1,9 @@
 # Gibki
 
-An open source grid system based on Flexbox using container queries. [Open in CodePen](https://codepen.io/collection/pgogaZ).
+An open source grid system based on Flexbox. [Open in CodePen](https://codepen.io/collection/pgogaZ).
 
 > [!NOTE]
-> This version (4.x.x) uses container queries. This has the advantage that grids can be nested and wrapped depending on the available container width. If you want to use media queries, use [version 3.1.0](https://github.com/deoostfrees/Gibki/tree/v3.1.0).
+> Gibki uses container queries by default. This allows grids to be nested and wrapped according to the available container width. To use media queries instead, set `$use-container-queries` to `false`. This will use media queries instead of container queries.
 
 ## Table of Contents
 
@@ -153,7 +153,7 @@ To nest content with the default grid, add a new `.flex` container and a set of 
 
 ### Responsive Layouts
 
-The grid system uses container queries to create responsive layouts based on the container's (`.flex`) size rather than the viewport width.
+The grid system allows you to create responsive layouts by defining different column widths for each viewport. There are four breakpoints that determine the viewports:
 
 - &#x3E;= 500px: Small `sm`
 - &#x3E;= 700px: Medium `md`
@@ -593,13 +593,17 @@ Offset a column by adding `.flex--offset-` classes.
 ### Sass Variables
 
 ```scss
+$use-container-queries: true !default;
+
 // Breakpoints map
+// Container queries are based on the container's width (rem).
+// Media queries are based on the viewport width (em).
 // Based on 16px
 $gibki-breakpoints: (
-  'sm': 31.25em, // 500px
-  'md': 43.75em, // 700px
-  'lg': 62.5em,  // 1000px
-  'xl': 75em     // 1200px
+  'sm': 31.25rem, // 31.25em (500px) if $use-container-queries is false
+  'md': 43.75rem, // 43.75em (700px) if $use-container-queries is false
+  'lg': 62.5rem,  // 62.5em (1000px) if $use-container-queries is false
+  'xl': 75rem     // 75em (1200px) if $use-container-queries is false
 );
 
 // Available columns
