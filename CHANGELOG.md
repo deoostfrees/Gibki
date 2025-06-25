@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.1.0] - 2025-06-
+
+### Added
+
+- `$use-container-queries` Sass variable to switch between container and media queries. Defaults to `true`. ed2f77f @deoostfrees
+
 ## [4.0.0] - 2025-03-28
 
 ### Changed
