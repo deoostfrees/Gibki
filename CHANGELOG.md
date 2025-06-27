@@ -4,7 +4,11 @@
 
 ### Added
 
-- `$use-container-queries` Sass variable to switch between container and media queries. Defaults to `true`. ed2f77f @deoostfrees
+- `$use-container-queries` Sass variable to switch between container and media queries. Defaults to `false`. ed2f77f 565ab4d @deoostfrees
+
+### Changed
+
+- **Breaking:** Use media queries by default. 565ab4d @deoostfrees
 
 ## [4.0.0] - 2025-03-28
 
