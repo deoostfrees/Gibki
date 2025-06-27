@@ -270,7 +270,7 @@
   margin-inline-start: calc(100% + var(--gibki-gutter-horizontal) / 1);
 }
 
-@container gibki (width >= 31.25rem) {
+@media screen and (width >= 31.25em) {
   .flex__sm-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -380,7 +380,7 @@
     order: 12;
   }
 }
-@container gibki (width >= 43.75rem) {
+@media screen and (width >= 43.75em) {
   .flex__md-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -490,7 +490,7 @@
     order: 12;
   }
 }
-@container gibki (width >= 62.5rem) {
+@media screen and (width >= 62.5em) {
   .flex__lg-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -600,7 +600,7 @@
     order: 12;
   }
 }
-@container gibki (width >= 75rem) {
+@media screen and (width >= 75em) {
   .flex__xl-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
