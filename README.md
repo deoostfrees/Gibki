@@ -2,9 +2,6 @@
 
 An open source grid system based on Flexbox. [Open in CodePen](https://codepen.io/collection/pgogaZ).
 
-> [!NOTE]
-> Gibki uses container queries by default. This allows grids to be nested and wrapped according to the available container width. To use media queries instead, set `$use-container-queries` to `false`. This will use media queries instead of container queries.
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -593,17 +590,17 @@ Offset a column by adding `.flex--offset-` classes.
 ### Sass Variables
 
 ```scss
-$use-container-queries: true !default;
+$use-container-queries: false !default;
 
 // Breakpoints map
 // Container queries are based on the container's width (rem).
 // Media queries are based on the viewport width (em).
 // Based on 16px
 $gibki-breakpoints: (
-  'sm': 31.25rem, // 31.25em (500px) if $use-container-queries is false
-  'md': 43.75rem, // 43.75em (700px) if $use-container-queries is false
-  'lg': 62.5rem,  // 62.5em (1000px) if $use-container-queries is false
-  'xl': 75rem     // 75em (1200px) if $use-container-queries is false
+  'sm': 31.25em, // 31.25rem (500px) if $use-container-queries is true
+  'md': 43.75em, // 43.75rem (700px) if $use-container-queries is true
+  'lg': 62.5em,  // 62.5rem (1000px) if $use-container-queries is true
+  'xl': 75em     // 75rem (1200px) if $use-container-queries is true
 );
 
 // Available columns
