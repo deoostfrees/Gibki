@@ -1,6 +1,6 @@
 # Changelog
 
-## [4.1.0] - 2025-06-
+## [4.1.0] - 2025-10-
 
 ### Added
 
@@ -9,6 +9,7 @@
 ### Changed
 
 - **Breaking:** Use media queries by default. 565ab4d @deoostfrees
+- The `flex__auto` class has been integrated into the breakpoint system and can now be used with prefixes such as `flex__md-auto`, `flex__lg-auto` and so on. 8cdd37b @deoostfrees
 
 ## [4.0.0] - 2025-03-28
 
