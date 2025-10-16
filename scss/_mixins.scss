@@ -5,6 +5,10 @@
 @mixin flex__($gibki-breakpoint: null) {
   $breakpoint: if($gibki-breakpoint == null, null, #{$gibki-breakpoint}-);
 
+  .flex__#{$breakpoint}auto {
+    flex: 1;
+  }
+
   @for $i from 1 through $gibki-columns {
 
     .flex__#{$breakpoint}#{$i} {

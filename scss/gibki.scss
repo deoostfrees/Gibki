@@ -169,10 +169,6 @@
   inline-size: 100%;
 }
 
-.flex__auto {
-  flex: 1;
-}
-
 @include mixins.flex__;
 @include mixins.flex--order-;
 @include mixins.flex--offset-;
