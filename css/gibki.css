@@ -271,6 +271,9 @@
 }
 
 @media screen and (width >= 31.25em) {
+  .flex__sm-auto {
+    flex: 1;
+  }
   .flex__sm-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -381,6 +384,9 @@
   }
 }
 @media screen and (width >= 43.75em) {
+  .flex__md-auto {
+    flex: 1;
+  }
   .flex__md-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -491,6 +497,9 @@
   }
 }
 @media screen and (width >= 62.5em) {
+  .flex__lg-auto {
+    flex: 1;
+  }
   .flex__lg-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
@@ -601,6 +610,9 @@
   }
 }
 @media screen and (width >= 75em) {
+  .flex__xl-auto {
+    flex: 1;
+  }
   .flex__xl-1 {
     max-inline-size: calc(8.3333333333% - var(--gibki-gutter-horizontal) + var(--gibki-gutter-horizontal) / 12);
   }
