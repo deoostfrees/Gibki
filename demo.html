@@ -12,38 +12,32 @@
         padding: 0;
       }
 
-      html {
-        box-sizing: border-box;
-        font-kerning: normal;
-        overflow-y: scroll;
-        overscroll-behavior: none;
-        scroll-behavior: smooth;
-        text-size-adjust: 100%;
-      }
-
       *,
       *::before,
       *::after {
-        box-sizing: inherit;
+        box-sizing: border-box;
+      }
+
+      html {
+        text-size-adjust: none;
       }
 
       body {
         background-color: #fff;
         color: #111;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-block: 2rem;
       }
 
       p:not(> span) {
-        max-width: 69ch;
+        max-inline-size: 69ch;
       }
 
       * + p {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
       }
 
       * + ul {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
       }
 
       html {
@@ -70,54 +64,47 @@
 
       * + h2,
       * + h3 {
-        margin-top: 2rem;
+        margin-block-start: 2rem;
       }
 
       code,
       pre {
-        font-size: 0.889em;
         background-color: #f7f7f7;
         color: inherit;
+        font-size: 0.889rem;
         overflow-x: auto;
+        tab-size: 4;
       }
 
       code {
-        padding-left: 0.222rem;
-        padding-right: 0.222rem;
-        padding-top: 0.222rem;
-        padding-bottom: 0.222rem;
+        padding: 0.222rem;
       }
 
       pre {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem;
       }
 
       * + pre {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
       }
 
       .container .container {
         background-color: #f7f7f7;
         color: inherit;
-        margin-top: 1rem;
+        margin-block-start: 1rem;
       }
 
       .flex .flex {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
       }
 
       [class*="flex__"] span {
         background: rgba(255, 215, 0, 0.4);
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        block-size: 100%;
         display: block;
-        height: 100%;
+        padding-block: 1rem;
+        padding-inline: 1rem;
       }
 
       [class*="flex__"] span:empty {
@@ -203,7 +190,7 @@
           <div class="flex__auto"><span>flex__auto</span></div>
           <div class="flex__auto"><span>flex__auto</span></div>
           <div class="flex__8"><span>flex__8</span></div>
-          <div class="flex__auto"><span>flex__auto</span></div>
+          <div class="flex__md-auto"><span>flex__md-auto</span></div>
         </div>
       </div>
 
