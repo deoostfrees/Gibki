@@ -1,6 +1,6 @@
 {
   "name": "gibki",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "An open source grid system based on Flexbox.",
   "main": "css/gibki.css",
   "style": "css/gibki.css",
