@@ -1,18 +1,33 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
-import license from 'rollup-plugin-license'
 
 const pkg = require('./package.json')
 
 const bannerContent = `
-  Gibki
+/**
+ * Gibki
+ *
+ * @author ${pkg.author}
+ * @version ${pkg.version}
+ * @url ${pkg.homepage}
+ *
+ * ${pkg.license} license
+ */`
 
-  @author ${pkg.author}
-  @version ${pkg.version}
-  @url ${pkg.homepage}
-
-  ${pkg.license} license`
+// Custom plugin to add banner to CSS files
+const cssBanner = () => ({
+  name: 'css-banner',
+  generateBundle(options, bundle) {
+    for (const fileName in bundle) {
+      const file = bundle[fileName]
+      if (file.type === 'asset' && fileName.endsWith('.css')) {
+        const banner = `${bannerContent.substring(1)}\n`
+        file.source = banner + file.source
+      }
+    }
+  }
+})
 
 let rollupBuilds
 
@@ -36,11 +51,7 @@ if (process.env.BUILD) {
       postcss({
         extract: true
       }),
-      license({
-        banner: {
-          content: bannerContent
-        }
-      })
+      cssBanner()
     ],
     watch: {
       clearScreen: false
@@ -62,11 +73,7 @@ if (process.env.BUILD) {
         extract: true,
         minimize: true
       }),
-      license({
-        banner: {
-          content: bannerContent
-        }
-      })
+      cssBanner()
     ],
     watch: {
       clearScreen: false
