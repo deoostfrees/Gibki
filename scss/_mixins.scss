@@ -3,7 +3,11 @@
 
 // flex__
 @mixin flex__($gibki-breakpoint: null) {
-  $breakpoint: if($gibki-breakpoint == null, null, #{$gibki-breakpoint}-);
+  $breakpoint: '';
+
+  @if $gibki-breakpoint != null {
+    $breakpoint: #{$gibki-breakpoint}-;
+  }
 
   .flex__#{$breakpoint}auto {
     flex: 1;
@@ -19,7 +23,11 @@
 
 // flex--offset-
 @mixin flex--offset-($gibki-breakpoint: null) {
-  $breakpoint: if($gibki-breakpoint == null, null, #{$gibki-breakpoint}-);
+  $breakpoint: '';
+
+  @if $gibki-breakpoint != null {
+    $breakpoint: #{$gibki-breakpoint}-;
+  }
 
   @for $i from 1 through $gibki-columns {
 
@@ -31,7 +39,11 @@
 
 // flex--order-
 @mixin flex--order-($gibki-breakpoint: null) {
-  $breakpoint: if($gibki-breakpoint == null, null, #{$gibki-breakpoint}-);
+  $breakpoint: '';
+
+  @if $gibki-breakpoint != null {
+    $breakpoint: #{$gibki-breakpoint}-;
+  }
 
   @for $i from 1 through $gibki-columns {
 
