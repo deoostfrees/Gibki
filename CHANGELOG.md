@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1] - 2026-01-13
+
+### Changed
+
+- Use @if/@else blocks to avoid the deprecated if( ) function in Sass. 29b09fa @deoostfrees
+- Adjust the license banner output in the CSS files. a5d8a6d @deoostfrees
+
 ## [4.1.0] - 2026-01-06
 
 ### Added
