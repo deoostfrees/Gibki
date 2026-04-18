@@ -607,6 +607,16 @@ $gibki-breakpoints: (
 $gibki-columns: 12;
 ```
 
+To use the Sass variables, you need to import the `gibki.scss` file in your Sass file and override the variables before the import.
+
+```scss
+@use 'gibki' with (
+  $use-container-queries: true,
+  $gibki-columns: 6,
+  $gibki-breakpoints: ('sm': 20em, 'md': 40em)
+);
+```
+
 ## Browser Support
 
 Gibki supports the following browsers (all the latest versions):
