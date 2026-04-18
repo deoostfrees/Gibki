@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.1.2] - 2026-04-18
+
+### Changed
+
+- Allow external overrides of Sass variables. 33e753d @deoostfrees
+
 ## [4.1.1] - 2026-01-13
 
 ### Changed
