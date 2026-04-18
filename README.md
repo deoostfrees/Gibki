@@ -601,13 +601,13 @@ $gibki-breakpoints: (
   'md': 43.75em, // 43.75rem (700px) if $use-container-queries is true
   'lg': 62.5em,  // 62.5rem (1000px) if $use-container-queries is true
   'xl': 75em     // 75rem (1200px) if $use-container-queries is true
-);
+) !default;
 
 // Available columns
-$gibki-columns: 12;
+$gibki-columns: 12 !default;
 ```
 
-To use the Sass variables, you need to import the `gibki.scss` file in your Sass file and override the variables before the import.
+To use the Sass variables, configure them via `@use ... with ()` when importing `gibki.scss`:
 
 ```scss
 @use 'gibki' with (
